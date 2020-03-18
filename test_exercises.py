@@ -26,7 +26,7 @@ def test_insert_right():
     assert tree.right.right.value == "B"
 
 
-def test_preorder():
+def test_preorder():  # nlr
     tree = Node("1", Node("2", Node("4"), Node("5")), Node("3", Node("6"), Node("7")))
     assert preorder(tree) == ["1", "2", "4", "5", "3", "6", "7"]
 
