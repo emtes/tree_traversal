@@ -25,10 +25,15 @@ def insert_right(node, value):
 
 def preorder(node):  # nlr
     list = []
-    if node:
-        list.append(node.value)
-        preorder(node.left)
-        preorder(node.right)
+
+    def _pre(node):
+        if node:
+            list.append(node.value)
+            _pre(node.left)
+            _pre(node.right)
+
+    _pre(node)
+    return list
 
 
 def is_unival_tree():
